@@ -18,34 +18,34 @@ export default function AdminDashboard() {
     <MobileLayout role="admin">
       <div className="space-y-6">
         {/* Welcome Card */}
-        <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-6 text-white">
+        <div className="glass-effect rounded-3xl p-6 text-[#EEEEEE] bg-gradient-to-br from-[#1D1616] to-[#31363F] shadow-lg">
           <h2 className="text-2xl font-bold mb-2">Admin Control</h2>
-          <p className="text-gray-300">Manage system settings</p>
+          <p className="text-[#EEEEEE]/80">Manage system settings</p>
         </div>
 
         {/* System Stats */}
         <div className="grid grid-cols-2 gap-4">
-          <div className="bg-white rounded-2xl p-4 shadow-sm">
-            <div className="text-2xl font-bold text-gray-900">156</div>
-            <div className="text-sm text-gray-600 mt-1">Total Users</div>
+          <div className="glass-effect rounded-2xl p-4 shadow-lg bg-gradient-to-br from-[#EEEEEE]/10 to-[#31363F]/10">
+            <div className="text-2xl font-bold text-[#EEEEEE]">156</div>
+            <div className="text-sm text-[#31363F] mt-1">Total Users</div>
           </div>
-          <div className="bg-white rounded-2xl p-4 shadow-sm">
-            <div className="text-2xl font-bold text-blue-600">$45.2K</div>
-            <div className="text-sm text-gray-600 mt-1">This Month</div>
+          <div className="glass-effect rounded-2xl p-4 shadow-lg bg-gradient-to-br from-[#EEEEEE]/10 to-[#31363F]/10">
+            <div className="text-2xl font-bold text-[#EEEEEE]">$45.2K</div>
+            <div className="text-sm text-[#31363F] mt-1">This Month</div>
           </div>
         </div>
 
         {/* Admin Actions */}
         <div>
-          <h3 className="text-lg font-bold text-gray-900 mb-3">Admin Actions</h3>
+          <h3 className="text-lg font-bold text-[#EEEEEE] mb-3">Admin Actions</h3>
           <div className="space-y-3">
             <button
               onClick={() => router.push("/admin/users")}
-              className="w-full bg-white rounded-2xl p-4 shadow-sm flex items-center justify-between hover:shadow-md transition-shadow"
+              className="w-full glass-effect rounded-2xl p-4 shadow-lg flex items-center justify-between hover:shadow-xl transition-all duration-300 hover:scale-[1.02] bg-gradient-to-r from-[#EEEEEE]/10 to-[#31363F]/10"
             >
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#31363F] to-[#31363F] rounded-xl flex items-center justify-center">
+                  <svg className="w-6 h-6 text-[#EEEEEE]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -55,22 +55,22 @@ export default function AdminDashboard() {
                   </svg>
                 </div>
                 <div className="text-left">
-                  <div className="font-semibold text-gray-900">Manage Users</div>
-                  <div className="text-sm text-gray-500">Add, edit, or remove users</div>
+                  <div className="font-semibold text-[#EEEEEE]">Manage Users</div>
+                  <div className="text-sm text-[#31363F]">Add, edit, or remove users</div>
                 </div>
               </div>
-              <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-[#31363F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
 
             <button
               onClick={() => router.push("/admin/rules")}
-              className="w-full bg-white rounded-2xl p-4 shadow-sm flex items-center justify-between hover:shadow-md transition-shadow"
+              className="w-full glass-effect rounded-2xl p-4 shadow-lg flex items-center justify-between hover:shadow-xl transition-all duration-300 hover:scale-[1.02] bg-gradient-to-r from-[#EEEEEE]/10 to-[#31363F]/10"
             >
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
-                  <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#1D1616] to-[#31363F] rounded-xl flex items-center justify-center">
+                  <svg className="w-6 h-6 text-[#EEEEEE]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -86,11 +86,11 @@ export default function AdminDashboard() {
                   </svg>
                 </div>
                 <div className="text-left">
-                  <div className="font-semibold text-gray-900">Approval Rules</div>
-                  <div className="text-sm text-gray-500">Configure approval workflows</div>
+                  <div className="font-semibold text-[#EEEEEE]">Approval Rules</div>
+                  <div className="text-sm text-[#31363F]">Configure approval workflows</div>
                 </div>
               </div>
-              <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-[#31363F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
@@ -99,20 +99,20 @@ export default function AdminDashboard() {
 
         {/* Recent Activity */}
         <div>
-          <h3 className="text-lg font-bold text-gray-900 mb-3">Recent Activity</h3>
+          <h3 className="text-lg font-bold text-[#EEEEEE] mb-3">Recent Activity</h3>
           <div className="space-y-3">
             {[
               { action: "New user added", user: "Jane Doe", time: "10 min ago" },
               { action: "Approval rule updated", user: "System", time: "1 hour ago" },
               { action: "User role changed", user: "John Smith", time: "3 hours ago" },
             ].map((activity, i) => (
-              <div key={i} className="bg-white rounded-2xl p-4 shadow-sm">
+              <div key={i} className="glass-effect rounded-2xl p-4 shadow-lg bg-gradient-to-r from-[#EEEEEE]/10 to-[#31363F]/10">
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="font-medium text-gray-900">{activity.action}</div>
-                    <div className="text-sm text-gray-500 mt-1">{activity.user}</div>
+                    <div className="font-medium text-[#EEEEEE]">{activity.action}</div>
+                    <div className="text-sm text-[#31363F] mt-1">{activity.user}</div>
                   </div>
-                  <div className="text-xs text-gray-400">{activity.time}</div>
+                  <div className="text-xs text-[#31363F]">{activity.time}</div>
                 </div>
               </div>
             ))}

@@ -2,6 +2,7 @@
 
 import { useRouter, usePathname } from "next/navigation"
 import type { ReactNode } from "react"
+import { OdooIcon } from "./odoo-icon"
 
 interface MobileLayoutProps {
   children: ReactNode
@@ -46,7 +47,7 @@ export function MobileLayout({ children, role }: MobileLayoutProps) {
   const navItems = getNavItems()
 
   const getIcon = (icon: string, isActive: boolean) => {
-    const className = `w-6 h-6 ${isActive ? "text-blue-600" : "text-gray-400"}`
+    const className = `w-6 h-6 ${isActive ? "text-[#EEEEEE]" : "text-[#31363F]"}`
 
     switch (icon) {
       case "home":
@@ -128,37 +129,37 @@ export function MobileLayout({ children, role }: MobileLayoutProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-20">
+    <div className="min-h-screen bg-gradient-to-br from-[#1D1616] via-[#31363F] to-[#31363F] pb-20 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-[#EEEEEE] rounded-full blur-2xl"></div>
+        <div className="absolute bottom-10 right-10 w-32 h-32 bg-[#EEEEEE] rounded-full blur-2xl"></div>
+        <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-[#EEEEEE] rounded-full blur-xl"></div>
+      </div>
+
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
+      <header className="glass-effect border-b border-[#EEEEEE]/20 sticky top-0 z-10 shadow-lg backdrop-blur-md">
         <div className="max-w-2xl mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center">
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                />
-              </svg>
+            <div className="w-16 h-10 rounded-xl flex items-center justify-center glass-icon">
+              <OdooIcon size="md" className="w-16 h-10 rounded-lg" />
             </div>
             <div>
-              <h1 className="text-lg font-bold text-gray-900">ExpenseFlow</h1>
-              <p className="text-xs text-gray-500 capitalize">{role}</p>
+              <h1 className="text-lg font-bold text-[#EEEEEE]">ExpenseFlow</h1>
+              <p className="text-xs text-[#31363F] capitalize">{role}</p>
             </div>
           </div>
-          <button onClick={handleSignOut} className="text-sm text-gray-600 hover:text-gray-900 font-medium">
+          <button onClick={handleSignOut} className="text-sm text-[#EEEEEE] hover:text-[#31363F] font-medium transition-colors duration-300">
             Sign Out
           </button>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="max-w-2xl mx-auto px-4 py-6">{children}</main>
+      <main className="max-w-2xl mx-auto px-4 py-6 glass-effect rounded-3xl shadow-2xl relative z-10">{children}</main>
 
       {/* Bottom Navigation */}
-      <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 safe-area-inset-bottom">
+      <nav className="fixed bottom-0 left-0 right-0 glass-effect border-t border-[#EEEEEE]/20 safe-area-inset-bottom shadow-lg backdrop-blur-md">
         <div className="max-w-2xl mx-auto px-4">
           <div className="flex items-center justify-around h-16">
             {navItems.map((item) => {
@@ -167,10 +168,10 @@ export function MobileLayout({ children, role }: MobileLayoutProps) {
                 <button
                   key={item.path}
                   onClick={() => router.push(item.path)}
-                  className="flex flex-col items-center justify-center gap-1 min-w-[60px]"
+                  className="flex flex-col items-center justify-center gap-1 min-w-[60px] transition-all duration-300 hover:scale-105"
                 >
                   {getIcon(item.icon, isActive)}
-                  <span className={`text-xs font-medium ${isActive ? "text-blue-600" : "text-gray-400"}`}>
+                  <span className={`text-xs font-medium transition-colors duration-300 ${isActive ? "text-[#EEEEEE]" : "text-[#31363F]"}`}>
                     {item.label}
                   </span>
                 </button>

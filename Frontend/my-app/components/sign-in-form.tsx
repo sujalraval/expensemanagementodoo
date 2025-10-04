@@ -35,10 +35,10 @@ export function SignInForm() {
   }
 
   return (
-    <div className="bg-white rounded-3xl shadow-lg p-8">
+    <div className="bg-gradient-to-br from-[#EEEEEE]/20 to-[#31363F]/20 rounded-3xl shadow-lg p-8 backdrop-blur-sm border border-[#EEEEEE]/30">
       <form onSubmit={handleSignIn} className="space-y-6">
         <div className="space-y-2">
-          <Label htmlFor="email" className="text-sm font-medium text-gray-700">
+          <Label htmlFor="email" className="text-sm font-medium text-[#EEEEEE]">
             Email
           </Label>
           <Input
@@ -48,15 +48,15 @@ export function SignInForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="h-12 rounded-xl border-gray-200 focus:border-blue-500 focus:ring-blue-500"
+            className="h-12 rounded-xl bg-[#EEEEEE]/10 border-[#31363F]/50 text-[#EEEEEE] placeholder-[#31363F] focus:border-[#EEEEEE] focus:ring-[#EEEEEE]/50 focus:bg-[#EEEEEE]/20 transition-all duration-300"
           />
-          <p className="text-xs text-gray-500 mt-1">
+          <p className="text-xs text-[#31363F] mt-1">
             Try: admin@company.com, manager@company.com, or employee@company.com
           </p>
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="password" className="text-sm font-medium text-gray-700">
+          <Label htmlFor="password" className="text-sm font-medium text-[#EEEEEE]">
             Password
           </Label>
           <Input
@@ -66,22 +66,32 @@ export function SignInForm() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            className="h-12 rounded-xl border-gray-200 focus:border-blue-500 focus:ring-blue-500"
+            className="h-12 rounded-xl bg-[#EEEEEE]/10 border-[#31363F]/50 text-[#EEEEEE] placeholder-[#31363F] focus:border-[#EEEEEE] focus:ring-[#EEEEEE]/50 focus:bg-[#EEEEEE]/20 transition-all duration-300"
           />
         </div>
 
         <Button
           type="submit"
           disabled={loading}
-          className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium text-base shadow-sm"
+          className="w-full h-12 bg-gradient-to-r from-[#31363F] to-[#31363F] hover:from-[#1D1616] hover:to-[#31363F] text-[#EEEEEE] rounded-xl font-medium text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]"
         >
-          {loading ? "Signing in..." : "Sign In"}
+          {loading ? (
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 border-2 border-[#EEEEEE]/30 border-t-[#EEEEEE] rounded-full animate-spin"></div>
+              Signing in...
+            </div>
+          ) : (
+            "Sign In"
+          )}
         </Button>
       </form>
 
-      <div className="mt-6 text-center">
-        <a href="#" className="text-sm text-blue-600 hover:text-blue-700 font-medium">
+      <div className="mt-6 flex justify-between items-center">
+        <a href="#" className="text-sm text-[#EEEEEE] hover:text-[#31363F] font-medium transition-colors duration-300">
           Forgot password?
+        </a>
+        <a href="/signup" className="text-sm text-[#EEEEEE] hover:text-[#31363F] font-medium transition-colors duration-300">
+          Sign Up
         </a>
       </div>
     </div>
