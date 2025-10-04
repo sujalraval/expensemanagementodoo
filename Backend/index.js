@@ -5,11 +5,6 @@ const app = express();
 // Middleware
 app.use(express.json());
 
-// Routes
-app.get("/", (req, res) => {
-  res.send("Hello, Express.js with procjet start ");
-});
-
 // Use PORT from .env (fallback to 3000)
 const PORT = process.env.PORT || 3000;
 

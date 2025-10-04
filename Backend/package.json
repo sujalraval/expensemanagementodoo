@@ -1,7 +1,16 @@
 {
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "app.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "dependencies": {
     "dotenv": "^17.2.3",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mongoose": "^8.19.0"
   },
   "scripts": {
     "start": "node index.js",
@@ -9,12 +18,5 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
-  },
-  "name": "backend",
-  "version": "1.0.0",
-  "main": "app.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
 }
