@@ -122,12 +122,12 @@ export default function HistoryPage() {
     <MobileLayout role="employee">
       <div className="space-y-6">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Expense History</h1>
-          <p className="text-gray-600 mt-1">Track all your expenses</p>
+          <h1 className="text-2xl font-bold text-[#0F044C]">Expense History</h1>
+          <p className="text-[#787A91] mt-1">Track all your expenses</p>
         </div>
 
         {/* Filter Tabs */}
-        <div className="bg-white rounded-2xl p-2 shadow-sm flex gap-2">
+        <div className="glass-effect rounded-2xl p-2 flex gap-2">
           {[
             { label: "All", value: "all" as const },
             { label: "Pending", value: "pending" as const },
@@ -148,19 +148,19 @@ export default function HistoryPage() {
 
         {/* Summary Cards */}
         <div className="grid grid-cols-3 gap-3">
-          <div className="bg-white rounded-2xl p-4 shadow-sm text-center">
+          <div className="glass-effect rounded-2xl p-4 text-center">
             <div className="text-xl font-bold text-gray-900">
               {expenses.filter((e) => e.status === "pending").length}
             </div>
             <div className="text-xs text-gray-600 mt-1">Pending</div>
           </div>
-          <div className="bg-white rounded-2xl p-4 shadow-sm text-center">
+          <div className="glass-effect rounded-2xl p-4 text-center">
             <div className="text-xl font-bold text-green-600">
               {expenses.filter((e) => e.status === "approved").length}
             </div>
             <div className="text-xs text-gray-600 mt-1">Approved</div>
           </div>
-          <div className="bg-white rounded-2xl p-4 shadow-sm text-center">
+          <div className="glass-effect rounded-2xl p-4 text-center">
             <div className="text-xl font-bold text-red-600">
               {expenses.filter((e) => e.status === "rejected").length}
             </div>
@@ -171,7 +171,7 @@ export default function HistoryPage() {
         {/* Expense List */}
         <div className="space-y-3">
           {filteredExpenses.map((expense) => (
-            <div key={expense.id} className="bg-white rounded-2xl p-4 shadow-sm">
+            <div key={expense.id} className="glass-effect rounded-2xl p-4 shadow-lg">
               <div className="flex items-start justify-between mb-3">
                 <div className="flex-1">
                   <div className="font-semibold text-gray-900 mb-1">{expense.title}</div>
@@ -199,7 +199,7 @@ export default function HistoryPage() {
         </div>
 
         {filteredExpenses.length === 0 && (
-          <div className="bg-white rounded-2xl p-8 shadow-sm text-center">
+          <div className="glass-effect rounded-2xl p-8 text-center">
             <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path

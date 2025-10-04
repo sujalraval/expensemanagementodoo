@@ -27,12 +27,12 @@ export default function ProfilePage() {
     <MobileLayout role="employee">
       <div className="space-y-6">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Profile</h1>
-          <p className="text-gray-600 mt-1">Manage your account settings</p>
+          <h1 className="text-2xl font-bold text-[#4E56C0]">Profile</h1>
+          <p className="text-[#687FE5] mt-1">Manage your account settings</p>
         </div>
 
         {/* Profile Header */}
-        <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-6 text-white text-center">
+        <div className="glass-effect bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-6 text-white text-center shadow-lg">
           <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4">
             <span className="text-3xl font-bold">{email.charAt(0).toUpperCase()}</span>
           </div>
@@ -41,7 +41,7 @@ export default function ProfilePage() {
         </div>
 
         {/* Account Information */}
-        <div className="bg-white rounded-2xl p-5 shadow-sm space-y-4">
+        <div className="glass-effect rounded-2xl p-5 shadow-lg space-y-4">
           <div className="flex items-center justify-between mb-2">
             <h3 className="font-semibold text-gray-900">Account Information</h3>
             <button onClick={() => setEditing(!editing)} className="text-sm text-blue-600 font-medium">
@@ -92,7 +92,7 @@ export default function ProfilePage() {
         </div>
 
         {/* Statistics */}
-        <div className="bg-white rounded-2xl p-5 shadow-sm">
+        <div className="glass-effect rounded-2xl p-5 shadow-lg">
           <h3 className="font-semibold text-gray-900 mb-4">Your Statistics</h3>
           <div className="space-y-4">
             <div className="flex items-center justify-between py-3 border-b border-gray-100">
@@ -115,7 +115,7 @@ export default function ProfilePage() {
         </div>
 
         {/* Settings */}
-        <div className="bg-white rounded-2xl p-5 shadow-sm space-y-3">
+        <div className="glass-effect rounded-2xl p-5 shadow-lg space-y-3">
           <h3 className="font-semibold text-gray-900 mb-2">Settings</h3>
           <button className="w-full flex items-center justify-between py-3 hover:bg-gray-50 rounded-xl px-3 -mx-3">
             <span className="text-gray-700">Notifications</span>
